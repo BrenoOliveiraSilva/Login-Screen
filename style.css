@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    overflow: hidden;
+    background: #00a6a7;
+}
+.container {
+    width: 100vw;
+}
+
+/* LOGO */
+.fa-circle-user {
+    color: rgb(255, 255, 255);
+}
+.logoBox {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+    color: transparent;
+    user-select: none;
+    transition: .5s;
+    left: 50%;
+    top: 13%;
+}
+.logoBox:hover {
+    transition: .5s;
+    color: azure;
+    top: 11%;
+}
+
+/* LOGIN BOX */
+#login {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+}
+.loginBox {
+    background: rgba(255, 255, 255, .2);
+    border-left: solid 1px azure;
+    border-right: solid 1px azure;
+    border-radius: 15px;
+    position: relative;
+    padding: 30px;
+    width: 320px;
+}
+.loginBox>h2 {
+    text-align: center;
+    color: #ffb938;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+/* Username & Password */
+.userBox>input {
+    border: none;
+    border-bottom: 1px solid azure;
+    background: transparent;
+    position: relative;
+    color: azure;
+    margin: 1rem 0;
+    outline: none;
+    width: 100%;
+}
+.userBox {
+    position: relative;
+}
+.userBox>label {
+    pointer-events: none;
+    position: absolute;
+    padding: 12px 0;
+    font-size: 1rem;
+    transition: .5s;
+    color: azure;
+    left: 0;
+    top: 0;
+}
+.userBox>input:focus ~ label, .userBox>input:valid ~ label {
+    font-size: 0.8rem;
+    color: #ffb938;
+    top: -.7rem;
+    left: 0;
+}
+
+/* LOGIN BUTTON */
+.buttonBox {
+    position: relative;
+}
+
+.loginButton {
+    border: 1px solid #ffb938;
+    transition: 1s ease-in-out;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    width: 120px;
+    height: 40px;
+}
+.loginButton:hover {
+    transition: 1s ease-in-out;
+    background: #ffb938;
+}
+.loginButton>svg {
+    transition: 1s ease-in-out;
+    stroke-dasharray: 120 480;
+    stroke-dashoffset: 120;
+    position: absolute;
+    stroke: azure;
+    fill: none;
+    left: 0;
+    top: 0;
+}
+.loginButton:hover>svg {
+    stroke-dashoffset: -480;
+}
+.loginButton>span {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: azure;
+}
+
+/* MESSAGES */
+.messagesBox {
+    position: relative;
+    padding-top: 10px;
+    color: #fff;
+}
+.messagesBox>a, .messagesBox>p>a {
+    text-decoration: none;
+    color: #ffb938;
+    transition: .5s;
+}
+.messagesBox>a:hover, .messagesBox>p>a:hover {
+    text-decoration: underline;
+    color: #ffb938;
+    transition: .5s;
+}
+
+/* SCREEN RULES */
+@media all and (max-width: 300px) {
+    .loginBox {
+        width: 270px;
+    }
+    .messagesBox {
+        font-size: .85rem;
+    }
+}
